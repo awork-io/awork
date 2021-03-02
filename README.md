@@ -17,3 +17,15 @@ Yes, the awork API has pagination which can be found in the Pagition section und
 https://api.awork.io/api/v1/users?page=1&pageSize=50
 ```
 Now you can reach the next page by setting page=2 and keeping the page size the same. The limit for the page size is 1000 entries.
+
+### How can I filter my API request?
+You can filter most of the API endpoints by adding an additional filter attribut to your request: ```filterby=...```
+More filter options can be found in the [Filter section](https://developers.awork.io/#api-description).
+```
+https://api.awork.io/api/v1/users?filterby=firstname eq 'John'
+```
+In this example, you can filter all users and only return those that have the firstname John.
+If you want to filter a list of objects, like the ...
+
+### Can I find deleted data via the API?
+No, deleted data cannot be requested from the API. Instead of deleting data completly, we recommend using the archiving option whenever possible.
