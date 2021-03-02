@@ -1,5 +1,5 @@
 # awork.io
-[awork](https://www.awork.io/) is an awesome work management tool that helps you be more productiv. Next to a [webapp](https://app.awork.io/) and an app for [IOS](https://apps.apple.com/de/app/awork-organisiere-dein-team/id1466945183) and [Android](https://play.google.com/store/apps/details?id=io.awork&hl=gsw&gl=US). We also provide a rich API that enables external developers to integrate awork into their workflows.
+[awork](https://www.awork.io/) is an awesome work management tool that helps you be more productiv. Next to a [webapp](https://app.awork.io/) and an app for [IOS](https://apps.apple.com/de/app/awork-organisiere-dein-team/id1466945183) and [Android](https://play.google.com/store/apps/details?id=io.awork&hl=gsw&gl=US), we also provide a rich API that enables external developers to integrate awork into their workflows.
 In this github repo you will find important infos, a FAQ with the most frequently asked questions and code examples that helps you get started even faster.
 
 Detailed infos about the API can be found under: https://developers.awork.io/
