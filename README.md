@@ -11,7 +11,7 @@ The awork API needs authentification for most endpoints. The easiest way for aut
 
 The other option would be to use OAuth 2.0: https://developers.awork.io/#authentication
 
-### Does the API has pagination?
+### Does the API have pagination?
 Yes, the awork API has pagination which can be found in the Pagition section under [API Description](https://developers.awork.io/#api-description). You can add pagination behind your query by adding the page and pageSize attribute like this:
 ```
 https://api.awork.io/api/v1/users?page=1&pageSize=50
@@ -29,3 +29,5 @@ If you want to filter a list of objects, like the ...
 
 ### Can I find deleted data via the API?
 No, deleted data cannot be requested from the API. Instead of deleting data completly, we recommend using the archiving option whenever possible.
+
+### Does awork provide webhooks so I can sync changes?
