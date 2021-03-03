@@ -4,6 +4,8 @@ In this github repo you will find important infos, a FAQ with the most frequentl
 
 Detailed infos about the API can be found under: https://developers.awork.io/
 
+If you have any issues, feel free to open one in the [Issues Tab](https://github.com/awork-io/awork/issues)
+
 ## FAQ
 
 ### What is the easiest option for authorization for the API?
@@ -35,4 +37,29 @@ In this example only projects get returned that have a member with the first nam
 No, deleted data cannot be requested from the API. Instead of deleting data completly, we recommend using the archiving option whenever possible.
 
 ### Does awork provide webhooks so I can sync changes?
+Yes, you can create webhooks in your webapp. More infos about this can be found in our help center under https://support.awork.io/hc/en-us/articles/360002809719-Webhooks
 
+Each webhook works for your whole workspace, so on the project added webhook, you get events for all projects added to your workspace, no matter who created it or to which team it belongs.
+
+The supported event types include:
+- Client added
+- Client deleted
+- File added
+- File deleted
+- Project added
+- Project comment added
+- Project deleted
+- Project member added
+- Project member deleted
+- Project status changed
+- Project task added
+- Project task deleted
+- Task assignment added
+- Task assignment deleted
+- Task comment added
+- Task status changed
+- Time tracking added
+- Time tracking deleted
+- User activation changed
+- User added
+- User deleted
