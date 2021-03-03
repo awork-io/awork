@@ -1,6 +1,6 @@
 # awork.io
-[awork](https://www.awork.io/) is an awesome work management tool that helps you be more productiv. Next to a [webapp](https://app.awork.io/) and an app for [IOS](https://apps.apple.com/de/app/awork-organisiere-dein-team/id1466945183) and [Android](https://play.google.com/store/apps/details?id=io.awork&hl=gsw&gl=US), we also provide a rich API that enables external developers to integrate awork into their workflows.
-In this github repo you will find important infos, a FAQ with the most frequently asked questions and code examples that helps you get started even faster.
+[awork](https://www.awork.io/) is an awesome work management tool that helps you to be more productiv. Next to a [webapp](https://app.awork.io/) and an app for [IOS](https://apps.apple.com/de/app/awork-organisiere-dein-team/id1466945183) and [Android](https://play.google.com/store/apps/details?id=io.awork&hl=gsw&gl=US), we also provide a rich API that enables external developers to integrate awork into their workflows.
+In this github repo you will find important infos, a FAQ with the most frequently asked questions and code examples that help you get started even faster.
 
 Detailed infos about the API can be found under: https://developers.awork.io/
 
@@ -9,7 +9,7 @@ Detailed infos about the API can be found under: https://developers.awork.io/
 ### What is the easiest option for authorization for the API?
 The awork API needs authentification for most endpoints. The easiest way for authentification is to use Basic Auth with a Bearer token which you can create in your awork application: [Client Applications and API Keys](https://support.awork.io/hc/en-us/articles/360002815960-Client-Applications-and-API-Keys)
 
-The other option would be to use OAuth 2.0: https://developers.awork.io/#authentication
+The other option would be to use OAuth 2.0: [API Authentication](https://developers.awork.io/#authentication)
 
 ### Does the API have pagination?
 Yes, the awork API has pagination which can be found in the Pagition section under [API Description](https://developers.awork.io/#api-description). You can add pagination behind your query by adding the page and pageSize attribute like this:
@@ -19,15 +19,20 @@ https://api.awork.io/api/v1/users?page=1&pageSize=50
 Now you can reach the next page by setting page=2 and keeping the page size the same. The limit for the page size is 1000 entries.
 
 ### How can I filter my API request?
-You can filter most of the API endpoints by adding an additional filter attribut to your request: ```filterby=...```
+The API supports filtering using the ODATA syntax. You can filter most of the API endpoints by adding an additional filter attribut to your request: ```filterby=...```
 More filter options can be found in the [Filter section](https://developers.awork.io/#api-description).
 ```
 https://api.awork.io/api/v1/users?filterby=firstname eq 'John'
 ```
 In this example, you can filter all users and only return those that have the firstname John.
-If you want to filter a list of objects, like the ...
+If you want to filter a list of objects, like the members of a project, you can do so like this:
+```
+https://awork.io/api/v1/projects?filterby=members/any(p: p\FirstName eq 'Neil')
+```
+In this example only projects get returned that have a member with the first name Neil.
 
 ### Can I find deleted data via the API?
 No, deleted data cannot be requested from the API. Instead of deleting data completly, we recommend using the archiving option whenever possible.
 
 ### Does awork provide webhooks so I can sync changes?
+
