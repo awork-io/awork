@@ -3,15 +3,23 @@
 In this github repo you will find important infos, a FAQ with the most frequently asked questions and code examples that help you get started even faster.
 
 Detailed infos about the API can be found under: https://developers.awork.io/
+If you have general questions about how awork works, check out our [Help Center](https://support.awork.io/hc/en-us)
 
 If you have any issues, feel free to open one in the [Issues Tab](https://github.com/awork-io/awork/issues)
+
+We currently have code examples for C# and typescript. You can find them in the examples folder above.
 
 ## FAQ
 
 ### What is the easiest option for authorization for the API?
-The awork API needs authentification for most endpoints. The easiest way for authentification is to use Basic Auth with a Bearer token which you can create in your awork application: [Client Applications and API Keys](https://support.awork.io/hc/en-us/articles/360002815960-Client-Applications-and-API-Keys)
+The awork API needs authentification for most endpoints. The easiest way for authentification is to use Token Auth with a Bearer token which you can create in your awork application: [Client Applications and API Keys](https://support.awork.io/hc/en-us/articles/360002815960-Client-Applications-and-API-Keys)
 
 The other option would be to use OAuth 2.0: [API Authentication](https://developers.awork.io/#authentication)
+
+### How do permissions work?
+In awork there are different permissions for each of the entities, like projects, tasks and users. For each entity you can either have no, read or write permissions. The permissions you have depends on your general user role in the workspace, allowing you f.e. to see all tasks and edit all projects, or your project specific permissions that are connected to your project role. So in one project you can be able to see all timetrackings, and in another one you can only see the project overview.
+
+More information on permissions can be found here: https://support.awork.io/hc/en-us/articles/360002811220-Permissions or in the [Permissions Section](https://developers.awork.io/#permissionsconcept) in the developer docs.
 
 ### Does the API have pagination?
 Yes, the awork API has pagination which can be found in the Pagition section under [API Description](https://developers.awork.io/#api-description). You can add pagination behind your query by adding the page and pageSize attribute like this:
