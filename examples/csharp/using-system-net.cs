@@ -1,7 +1,6 @@
 using System;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
 using Newtonsoft;
 
 namespace ExampleApi.Services
@@ -18,7 +17,7 @@ namespace ExampleApi.Services
         }
 
         // example getting subtasks for a task
-        public async void GetSubTasksForTaskAsync(string taskId)
+        public async System.Threading.Tasks.Task GetSubTasksForTaskAsync(string taskId)
         {
             try
             {
@@ -34,7 +33,7 @@ namespace ExampleApi.Services
             }
         }
 
-        public async void CreateSubtasksForTaskAsync(string taskId, Subtask subtask) 
+        public async System.Threading.Tasks.Task CreateSubtasksForTaskAsync(string taskId, Subtask subtask) 
         {
             try
             {
@@ -51,7 +50,7 @@ namespace ExampleApi.Services
             }
         }
 
-        public async void GetWithPagination(int pageLimit, string projectId) 
+        public async System.Threading.Tasks.Task GetWithPagination(int pageLimit, string projectId) 
         {
             var tasks = new List();
             bool hasNext = true;
@@ -67,7 +66,7 @@ namespace ExampleApi.Services
                 var json = await response.Content.ReadAsStringAsync();
 
                 // we use Newtonsoft's JsonConvert to parse the response JSON to a C# object
-                var newTasks = JsonConvert.DeserializeObject<List<MyDetail>>(json);
+                var newTasks = JsonConvert.DeserializeObject<List<Task>>(json);
                 tasks.AddRange(newTasks);
                 page++;
             }
