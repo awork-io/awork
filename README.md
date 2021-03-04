@@ -71,3 +71,9 @@ The supported event types include:
 - User activation changed
 - User added
 - User deleted
+
+## Code Examples
+
+- [NodeJS examples](./examples/nodejs)
+
+- [C# examples](./examples/csharp)
