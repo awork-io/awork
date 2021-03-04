@@ -9,9 +9,9 @@ const client = axios.create({
   },
 });
 
-// example of getting subtasks for a task with id taskId -> this will get all the tasks from page 1 and limit the number of items of by 10 for each page
+// example of getting subtasks for a task with id taskId
 client
-  .get(`/tasks/${taskId}/subtasks?page=1&pageSize=10`)
+  .get(`/tasks/${taskId}/subtasks`)
   .then((response) => {
     // returns a list of the subtasks for the task
     const subtasksForTask = response.data;
