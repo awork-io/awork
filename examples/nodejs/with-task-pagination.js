@@ -37,7 +37,7 @@ async function getTasksForProject(projectId, pageLimit) {
 }
 
 (async function () {
-  const projectId = "777f80a2-d272-eb11-a607-00155d3163c0";
+  const projectId = "your-project-id";
   // we're limiting the results by 5 items per page
   const pageLimit = 5;
   const resultTasks = await getTasksForProject(projectId, pageLimit);
