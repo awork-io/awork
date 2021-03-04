@@ -11,14 +11,15 @@ class AworkApiClientExample
         this._httpClient.HttpHeaders.Add("Authorization", $"Bearer {apiToken}");
     }
 
+    // example of getting subtasks for a task with id taskId -> this will get all the tasks from page 1 and limit the number of items of by 10 for each page
     public async Task<SubTask> GetSubTaskForTaskAsync(string taskId) 
     {
-       // example of getting subtasks for a task with id taskId -> this will get all the tasks from page 1 and limit the number of items of by 10 for each page
        var response = await this._httpClient.GetAsync($"/tasks/{taskId}/subtask?page=1&pageSize=10");
 
        // then we can handle the response the way we want, using newtonsoft's JSONConverter for example  
     } 
 
+    // example of creating a subtask belonging to a task with the provided taskId
     public async Task<SubTask> CreateSubTaskForTaskAsync(string taskId, Subtask subtask) 
     {
        var response = await this._httpClient.PostAsJsonAsync($"/tasks/{taskId}/subtask", subtask);
