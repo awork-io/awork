@@ -8,7 +8,7 @@ const apiKey = process.env.API_KEY;
 
 // create a client to avoid redundant code
 const client = axios.create({
-  baseURL: "https://api.myhq.io/api/v1",
+  baseURL: "https://api.awork.io/api/v1",
   headers: {
     Authorization: `Bearer ${apiKey}`,
   },
