@@ -55,6 +55,7 @@ namespace ExampleApi.Services
         {
             var tasks = new List();
             bool hasNext = true;
+            var page = 1;
 
             while (hasNext) 
             {
@@ -68,6 +69,7 @@ namespace ExampleApi.Services
                 // we use Newtonsoft's JsonConvert to parse the response JSON to a C# object
                 var newTasks = JsonConvert.DeserializeObject<List<MyDetail>>(json);
                 tasks.AddRange(newTasks);
+                page++;
             }
 
             return tasks;
