@@ -44,6 +44,8 @@ In this example only projects get returned that have a member with the first nam
 ### Can I find deleted data via the API?
 No, deleted data cannot be requested from the API. Instead of deleting data completly, we recommend using the archiving option whenever possible.
 
+![Logo](https://www.awork.io/wp-content/uploads/2019/01/aworkLogoB-1.svg)
+
 ### Does awork provide webhooks so I can sync changes?
 Yes, you can create webhooks in your webapp. More infos about this can be found in our help center under https://support.awork.io/hc/en-us/articles/360002809719-Webhooks
 
