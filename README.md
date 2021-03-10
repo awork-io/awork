@@ -1,5 +1,5 @@
 # awork.io
-[awork](https://www.awork.io/) is an awesome work management tool that helps you to be more productiv. Next to a [webapp](https://app.awork.io/) and an app for [IOS](https://apps.apple.com/de/app/awork-organisiere-dein-team/id1466945183) and [Android](https://play.google.com/store/apps/details?id=io.awork&hl=gsw&gl=US), we also provide a rich API that enables external developers to integrate awork into their workflows.
+[awork](https://www.awork.io/) is an awesome work management tool that helps you to be more productive. Next to a [webapp](https://app.awork.io/) and an app for [IOS](https://apps.apple.com/de/app/awork-organisiere-dein-team/id1466945183) and [Android](https://play.google.com/store/apps/details?id=io.awork&hl=gsw&gl=US), we also provide a rich API that enables external developers to integrate awork into their workflows.
 In this github repo you will find important infos, a FAQ with the most frequently asked questions and code examples that help you get started even faster.
 
 Detailed infos about the API can be found under: https://developers.awork.io/
@@ -12,7 +12,7 @@ We currently have code examples for C# and typescript. You can find them in the 
 ## FAQ
 
 ### What is the easiest option for authorization for the API?
-The awork API needs authentification for most endpoints. The easiest way for authentification is to use Token Auth with a Bearer token which you can create in your awork application: [Client Applications and API Keys](https://support.awork.io/hc/en-us/articles/360002815960-Client-Applications-and-API-Keys)
+The awork API needs authentication for most endpoints. The easiest way for authentication is to use Token Auth with a Bearer token which you can create in your awork application: [Client Applications and API Keys](https://support.awork.io/hc/en-us/articles/360002815960-Client-Applications-and-API-Keys)
 
 The other option would be to use OAuth 2.0: [API Authentication](https://developers.awork.io/#authentication)
 
@@ -79,3 +79,5 @@ The supported event types include:
 - [NodeJS examples](./examples/nodejs)
 
 - [C# examples](./examples/csharp)
+
+- [Python3 examples](./examples/python)
