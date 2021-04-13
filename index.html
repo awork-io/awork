@@ -36,6 +36,16 @@
     <script src="dist/swagger-ui-bundle.js" charset="UTF-8"> </script>
     <script src="dist/swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
     <script>
+
+    const HideInfoUrlPartsPlugin = () => {
+      return {
+        wrapComponents: {
+          InfoUrl: () => () => null,
+          InfoBasePath: () => () => null, // this hides the `Base Url` part too, if you want that
+        }
+      }
+    }
+
     window.onload = function() {
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
@@ -44,12 +54,13 @@
         deepLinking: true,
         presets: [
           SwaggerUIBundle.presets.apis,
-          SwaggerUIStandalonePreset
+          // SwaggerUIStandalonePreset
         ],
         plugins: [
-          SwaggerUIBundle.plugins.DownloadUrl
+          SwaggerUIBundle.plugins.DownloadUrl,
+          HideInfoUrlPartsPlugin
         ],
-        layout: "StandaloneLayout"
+        // layout: "StandaloneLayout"
       });
       // End Swagger UI call region
 
