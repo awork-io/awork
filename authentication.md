@@ -69,35 +69,9 @@ The client constructs the request URI by adding the following parameters to the 
 * `scope`: A space-separated list of API scopes. Required.
 * `state`: An arbitrary state string that helps the client application to identify the request. Optional.
 
-{% api-method method="get" host="https://api.awork.io/api/v1/accounts/authorize?client\_id={client\_id}&response\_type=code&grant\_type=authorization\_code&redirect\_uri={redirect\_uri}&state={state}&scope={scope}" path="" %}
-{% api-method-summary %}
-Authorization Request
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+```text
+https://api.awork.io/api/v1/accounts/authorize?client_id={client_id}&response_type=code&grant_type=authorization_code&redirect_uri={redirect_uri}&state={state}&scope={scope}
 ```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-| `GET https://api.awork.io/api/v1/accounts/authorize?    client_id={client_id}&    response_type=code&    grant_type=authorization_code&    redirect_uri={redirect_uri}&    state={state}&    scope={scope}` |
-| :--- |
-
 
 **Note:** The generated URL needs to be opened in a browser window. the user has to log in to authorize the application.
 
@@ -134,12 +108,8 @@ If the client application has been successfully authorized, it sends a request w
 
 **Note:** To build a proper HTTP Authorization header for [Basic Access Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication), you need to encode your `client_id` and `client_secret` using [Base64](https://en.wikipedia.org/wiki/Base64), and add it to the `Authorization` header as follows: `Authorization: Basic Base64({AppId}:{AppSecret})`
 
-| `POST https://api.awork.io/api/v1/accounts/tokenredirect_uri={redirect_uri}  &grant_type=authorization_code  &code={code}Authorization: Basic Base64({client_id}:{client_secret})` |
-| :--- |
-
-
 ```text
-
+POST https://api.awork.io/api/v1/accounts/tokenredirect_uri={redirect_uri}  &grant_type=authorization_code  &code={code}Authorization: Basic Base64({client_id}:{client_secret})
 ```
 
 **Note:** All query parameters \(especially the `redirect_uri`\) should be properly URL-encoded.
@@ -148,9 +118,15 @@ If the client application has been successfully authorized, it sends a request w
 
 If the access token request is valid and authorized, the authorization server issues an Access Token and Refresh Token. If the request failed or is invalid, the authorization server returns an error response.
 
-| `{   "access_token": "eyJhbGciOiJ...",  // The Access Token used for authorization.   "token_type": "Bearer",            // The token type, usually 'Bearer'.   "resource": "awork.io",          // The resource that granted the token.   "expires_in": 86400,               // The expiration time of the token, in seconds.   "refresh_token": "eyJhbGciOiJ...", // The refresh token to get a new access token, if requested.}` |
-| :--- |
-
+```text
+{
+    "access_token": "eyJhbGciOiJ...",
+    "token_type": "Bearer",
+    "resource": "awork.io",
+    "expires_in": 86400,
+    "refresh_token": "eyJhbGciOiJ..."
+}
+```
 
 After receiving the Access Token, you can use it to request resources from the API.
 
@@ -158,9 +134,9 @@ After receiving the Access Token, you can use it to request resources from the A
 
 To receive resources from the API, add the Access Token to the Authorization header in the following form:
 
-| `Authorization: Bearer {access_token}` |
-| :--- |
-
+```text
+Authorization: Bearer {access_token}
+```
 
 **Note**: Access Tokens expires and needs to be refreshed with the Refresh Token.
 
