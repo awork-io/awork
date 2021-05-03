@@ -5,7 +5,7 @@ You have two options to access our api.
 * Fixed token generated in the ui which is permanent valid, but is not user specific. This makes sense for background synchronisation applications. Details explained [here](https://support.awork.io/hc/de/articles/360002815960-Client-Applications-und-API-Keys).
 * OAuth 2
 
-```text
+```aspnet
 // The token can be used in the Authorization Header:
 Authorization: Bearer {access_token}
 ```
