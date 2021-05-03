@@ -1,4 +1,4 @@
-# Pagination & Filtering
+# Pagination
 
 #### Why pagination? <a id="PaginationintheRESTAPI-Whypagination?"></a>
 
