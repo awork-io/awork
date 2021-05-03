@@ -58,3 +58,29 @@ To give some further information on the cause of the error the API also returns 
 | insufficient-subscription-level | Your team does not have the required subscription level to use this feature. Upgrade to a higher plan. |
 | insufficient-seats | Your team does not have enough remaining seats while trying to invite or activate users. |
 
+### HTTP Status Codes
+
+On each request to our API you get a response with a HTTP status code that indicates if it was successful.
+
+#### Success Status Codes
+
+```text
+
+GET           200 (OK) including the object(s)
+POST          200 (OK) including the newly created object
+              202 (Accepted) for batch or background operations
+              204 (No content) for business operations without a return value
+PUT           200 (OK) including the updated object
+DELETE        204 (No content)
+
+```
+
+#### Client Failure Status Codes
+
+```text
+
+400 (Bad request)   When the request model is invalid or the operation is not allowed
+401 (Unauthorized)  When the requesting user is lacking the necessary permissions for the request
+404 (Not found)     When a requested resource does not exist
+```
+
