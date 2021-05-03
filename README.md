@@ -1,4 +1,4 @@
-# awork.io
+# General
 
 ![](.gitbook/assets/980x450-titelbild.jpeg)
 
