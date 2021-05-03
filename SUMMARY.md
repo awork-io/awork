@@ -1,6 +1,6 @@
 # Table of contents
 
-* [General](README.md)
+* [awork.io Developer Docs](README.md)
 * [Description](description.md)
 * [Authentication](authentication.md)
 * [Error Handling](error-handling.md)
