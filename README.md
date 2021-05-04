@@ -1,4 +1,4 @@
-# awork.io
+# awork.io Developer Docs
 
 ![](.gitbook/assets/980x450-titelbild.jpeg)
 
