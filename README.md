@@ -1,6 +1,6 @@
 # awork.io Developer Docs
 
-![](.gitbook/assets/980x450-titelbild.jpeg)
+![](.gitbook/assets/new-bg.png)
 
 This is the developer guide for the awork API, which allows developers to access entities and business logic of awork. We’re glad you’re here, and we hope that the documentation will help you build something awesome.
 
