@@ -12,7 +12,7 @@ In this section you find upcoming changes. Breaking changes are marked additiona
 
 ### Multi User Assignment - 18.09.21 🚨
 
-This release adds the highly requested feature to assign multiple users to the same task. As a result, we reworked the endpoints to assign users to tasks and task templates as well as automations.
+This release adds the highly requested feature to assign multiple users to the same task. As a result, we reworked the endpoints allow assigning multiple users to tasks and task templates as well as automations.
 
 If you want to use this feature, please enable the task setting `allow-multi-user-assignment` in awork in the workspace settings page.
 
