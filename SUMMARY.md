@@ -7,6 +7,7 @@
 * [Pagination](pagination-and-filtering.md)
 * [Filtering](filtering.md)
 * [Permissions](permissions.md)
+* [API Changes](api-changes.md)
 * [API Endpoints](http://openapi.awork.io/)
 * [Imprint](https://www.awork.io/rechtliches/impressum/)
 
