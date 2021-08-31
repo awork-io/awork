@@ -12,9 +12,9 @@ In this section you find upcoming changes. Breaking changes are marked additiona
 
 ### Multi User Assignment - 18.09.21 🚨
 
-This release adds the highly requested feature to assign multiple users to the same task. As a result, we reworked the endpoints allow assigning multiple users to tasks and task templates as well as automations.
+This release adds the highly requested feature to assign multiple users to the same task. As a result, we reworked the endpoints that allow assigning multiple users to tasks and task templates as well as automations.
 
-If you want to use this feature, please enable the task setting `allow-multi-user-assignment` in awork in the workspace settings page.
+If you want to use this feature, please enable the task setting "Allow multi user assignment" in awork in the workspace settings page. Alternatively you can activate the setting by calling the tasks/settings endpoint from below with the setting name `allow-multi-user-assignment`.
 
 #### Removed endpoints
 
@@ -35,7 +35,6 @@ tasks/{taskId}/setAssignees
 
 {% api-method-description %}
 This method is used to assign users to a task. You always need to pass all users you want to assign. If an already assigned user is not in the passed user id list, he/she gets unassigned.  
-User needs to have write permissions for the task.  
   
 The user ids are passed in the body as an array of strings.
 {% endapi-method-description %}
@@ -92,6 +91,46 @@ The id of the task template.
 
 ```
 
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://api.awork.io/v1/" path="tasks/settings" %}
+{% api-method-summary %}
+tasks/settings
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="enabled" type="boolean" required=true %}
+Whether the setting is active or not.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+The setting type. For multi-user assignment: `allow-multi-user-assignment` 
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  "type": "allow-multi-user-assignment",
+  "enabled": true,
+  "workspaceId": "00000000-0000-0000-0000-000000000000"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
