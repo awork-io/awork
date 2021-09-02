@@ -10,6 +10,14 @@ description: "This page contains a list of past and upcoming changes of our API.
 In this section you find upcoming changes. Breaking changes are marked additionally 🚨
 {% endhint %}
 
+### Project Templates - Auto Billability 🚨
+
+Currently projects have one property called `IsBillableByDefault` which decides whether time entries created on that project are marked as billable or not. This is either set by the project template or if no project template was used for creation, by whether the project has a company or not. In the case of a company, the times are marked as billed, else the times are marked as not billable.
+
+The problem is, that the project template always overrules this company rule. We need to have more flexibility here, so we change the `IsBillableByDefault` property on the project template from a `boolean` to a `string` field with the possible values: `on, off, auto`.
+
+When the `auto` option is set, the `IsBillableByDefault` of the project on project creation will be set according to the company rule, so `true` if a company is set and `false` if no company is set.
+
 ### Multi User Assignment - 18.09.21 🚨
 
 This release adds the highly requested feature to assign multiple users to the same task. As a result, we reworked the endpoints that allow assigning multiple users to tasks and task templates as well as automations.
