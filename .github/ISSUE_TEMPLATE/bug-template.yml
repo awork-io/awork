@@ -30,16 +30,13 @@ body:
     validations:
       required: false
   - type: textarea
-    id: workspace-info
-    attributes:
-      label: Which workspace are you using?
-      description: Please provide the url to your workspace or your workspace id so we can filter for your calls or find the relevant entities.
-      placeholder: my-awesome-workspace.awork.io / 64e2d583-a9a7-e811-bce7-00155d315056
-    validations:
-      required: false
-  - type: textarea
     id: logs
     attributes:
       label: Relevant error responses
       description: Please copy and paste any relevant log output or error response that you got back from the API. This will be automatically formatted into code, so no need for backticks.
       render: shell
+  - type: markdown
+    attributes:
+      value: |
+        ## Disclaimer
+        Please be aware that all conversations in this GitHub repo are public, therefore please do not include private/confidential information such as workspace url, security tokens or personal information like e-mail addresses, names etc.
