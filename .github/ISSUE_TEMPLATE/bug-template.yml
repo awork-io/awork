@@ -25,21 +25,21 @@ body:
     id: trace-id
     attributes:
       label: What is the trace id of the call?
-      description: Please provide the trace id of the call. If you don't have one, please provide route + request models in the problem description.
-      placeholder: trace-id
+      description: Please provide the trace id of the call. If you don't have one or you cannot find it, please provide the request route + request model here.
+      placeholder: The trace-id of the call.
     validations:
       required: false
   - type: textarea
     id: workspace-info
     attributes:
-      label: What is the workspace url?
-      description: Please provide the url to your workspace or your workspace id.
-      placeholder: my-awesome-workspace.awork.io
+      label: Which workspace are you using?
+      description: Please provide the url to your workspace or your workspace id so we can filter for your calls or find the relevant entities.
+      placeholder: my-awesome-workspace.awork.io / 64e2d583-a9a7-e811-bce7-00155d315056
     validations:
       required: false
   - type: textarea
     id: logs
     attributes:
-      label: Relevant error response
+      label: Relevant error responses
       description: Please copy and paste any relevant log output or error response that you got back from the API. This will be automatically formatted into code, so no need for backticks.
       render: shell
