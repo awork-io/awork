@@ -1,0 +1,42 @@
+name: Bug Report
+description: This is the template to report a bug for the awork API.
+title: "[Bug]: Please provide a quick summary of the problem"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for informing us about a bug in our API. Please provide us with the necessary details, so we can help you as fast as possible.
+  - type: markdown
+    attributes:
+      value: |
+        ## What infos do we need in order to help?
+        Please provide us with a trace id of the failing call and a detailed problem description including expected behaviour.
+        The trace-id can be found in the response headers. It looks like this: `trace-id: 2ab931e5606e3ccd`.
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What happened?
+      description: Tell us in detail what problem occurred. Please also tell us, what you would expect to happen.
+      placeholder: Tell us what happend, how we can repro it and what you expect.
+    validations:
+      required: true
+  - type: textarea
+    id: trace-id
+    attributes:
+      label: What is the trace id of the call?
+      description: Please provide the trace id of the call. If you don't have one, please provide the request route + request model here.
+      placeholder: The trace-id of the call.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant error responses
+      description: Please copy and paste any relevant log output or error response that you got back from the API. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: markdown
+    attributes:
+      value: |
+        ## Disclaimer
+        Please be aware that all conversations in this GitHub repo are public, therefore please do not include private/confidential information such as workspace url, security tokens or personal information like e-mail addresses, names etc.
