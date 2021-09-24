@@ -25,7 +25,7 @@ body:
     id: trace-id
     attributes:
       label: Do you have a trace id of the call?
-      description: If your question is about a specific call, please provide the trace id of the call. If you don't have one or you cannot find it, please provide the request route + request model here.
+      description: If your question is about a specific call, please provide the trace id of the call. If you don't have one, please provide the request route + request model here.
       placeholder: The trace-id of the call.
     validations:
       required: false
