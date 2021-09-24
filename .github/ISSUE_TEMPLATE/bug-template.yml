@@ -28,7 +28,7 @@ body:
       description: Please provide the trace id of the call. If you don't have one or you cannot find it, please provide the request route + request model here.
       placeholder: The trace-id of the call.
     validations:
-      required: false
+      required: true
   - type: textarea
     id: logs
     attributes:

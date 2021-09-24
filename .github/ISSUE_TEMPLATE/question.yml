@@ -1,0 +1,36 @@
+name: Question
+description: This is the template to ask a general question for the awork API. For bugs please use the specialized bug template.
+title: "[Question]: Please provide a quick summary of your question"
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for working with our API. We try to make our API as easy to use as possible and provide very good documentation. If you have any questions or feature requests please let us know and we will make sure to help you as fast as possible.
+  - type: markdown
+    attributes:
+      value: |
+        ## What infos do we need in order to help?
+        If you ask us a question, please make sure to formulate it clear and to give us as many additional information as possible. If your question is about a specific endpoint/call, please provide us with a trace id of the call and a detailed description including expected behaviour.
+        The trace-id can be found in the response headers. It looks like this: `trace-id: 2ab931e5606e3ccd`.
+  - type: textarea
+    id: question
+    attributes:
+      label: What is your question?
+      description: Tell us in detail what question you have. If you have a endpoint that is working other than expected, please provide us with the expected behaviour.
+      placeholder: Your question.
+    validations:
+      required: true
+  - type: textarea
+    id: trace-id
+    attributes:
+      label: Do you have a trace id of the call?
+      description: If your question is about a specific call, please provide the trace id of the call. If you don't have one or you cannot find it, please provide the request route + request model here.
+      placeholder: The trace-id of the call.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        ## Disclaimer
+        Please be aware that all conversations in this GitHub repo are public, therefore please do not include private/confidential information such as workspace url, security tokens or personal information like e-mail addresses, names etc.
