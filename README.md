@@ -81,3 +81,6 @@ The supported event types include:
 - [C# examples](./examples/csharp)
 
 - [Python3 examples](./examples/python)
+
+## API Clients (third party)
+- https://www.npmjs.com/package/@brandboostinggmbh/awork-sdk
