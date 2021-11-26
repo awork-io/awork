@@ -84,3 +84,4 @@ The supported event types include:
 
 ## API Clients (third party)
 - https://www.npmjs.com/package/@brandboostinggmbh/awork-sdk
+- https://github.com/timkley/awork-php-sdk
