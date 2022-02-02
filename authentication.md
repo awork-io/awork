@@ -12,7 +12,7 @@ Authorization: Bearer {access_token}
 
 ## OAuth Flow
 
-#### Client Application <a href="authentication-clientapplication" id="authentication-clientapplication"></a>
+#### Client Application <a href="#authentication-clientapplication" id="authentication-clientapplication"></a>
 
 A client application needs to be registered before you can make API calls. Go to the workspace settings panel in awork and add a new client application. You will be asked to provide a unique name and a display name for your client. You will receive a client secret in return.
 
@@ -28,7 +28,7 @@ The `client_secret` is generated in the client applications section of awork. It
 
 The client secret is only displayed when creating the client application! It can be regenerated, but all clients will lose access when their token expires.
 
-#### Scopes <a href="authentication-scopes" id="authentication-scopes"></a>
+#### Scopes <a href="#authentication-scopes" id="authentication-scopes"></a>
 
 The OAuth 2.0 authentication flow uses scopes to define which rights are granted to the application by the user. Scopes are sent as a space separated list. The API currently supports these scopes:
 
@@ -48,17 +48,17 @@ The `Refresh Token` is used to get a new `Access Token`once that one has expired
 
 The `Authorization Code` is a transitory code used to retrieve an `Access Token`. It should not be stored in the client application.
 
-#### Endpoints <a href="authentication-endpoints" id="authentication-endpoints"></a>
+#### Endpoints <a href="#authentication-endpoints" id="authentication-endpoints"></a>
 
 The OAuth endpoints are required to get an `Access Token` and exchange a `Refresh Token` for a new `Access Token`:
 
-**`Authorization Endpoint:`**` /accounts/authorize` may be used to initially retrieve an Authorization Code.
+**`Authorization Endpoint:`**` ``/accounts/authorize` may be used to initially retrieve an Authorization Code.
 
-**`Token Endpoint:`**` /accounts/token` may be used to retrieve an Access Token from either an Authorization Code or a Refresh Token.
+**`Token Endpoint:`**` ``/accounts/token` may be used to retrieve an Access Token from either an Authorization Code or a Refresh Token.
 
-### Authorization Code Flow <a href="authentication-authorizationcodeflow" id="authentication-authorizationcodeflow"></a>
+### Authorization Code Flow <a href="#authentication-authorizationcodeflow" id="authentication-authorizationcodeflow"></a>
 
-#### Authorization Request <a href="authentication-authorizationrequest" id="authentication-authorizationrequest"></a>
+#### Authorization Request <a href="#authentication-authorizationrequest" id="authentication-authorizationrequest"></a>
 
 The client constructs the request URI by adding the following parameters to the query string of the authorization endpoint URI using the `application/x-www-form-urlencoded` format. The client directs the user to the constructed URI using a browser window. The user is prompted to log in, enter her or his username and password, and grant the requested permissions to the client application. If the user is part of several workspaces in awork, the user needs to select the workspace before authorizing the application.
 
@@ -77,11 +77,11 @@ https://api.awork.io/api/v1/accounts/authorize?client_id={client_id}&response_ty
 
 All query parameters (especially the `redirect_uri`) may be properly URL-encoded.
 
-#### User Authentication <a href="authentication-userauthentication" id="authentication-userauthentication"></a>
+#### User Authentication <a href="#authentication-userauthentication" id="authentication-userauthentication"></a>
 
 The user logs in, and can then grant or revoke the authorization request.
 
-#### Authorization Response <a href="authentication-authorizationresponse" id="authentication-authorizationresponse"></a>
+#### Authorization Response <a href="#authentication-authorizationresponse" id="authentication-authorizationresponse"></a>
 
 If the user grants the authorization request, the authorization server issues an authorization code and delivers it to the client by adding the following parameters to the query string of the redirection URI using the `application/x-www-form-urlencoded`format.
 
@@ -94,7 +94,7 @@ If the user grants the authorization request, the authorization server issues an
 | `302 Found{redirect_uri}?code={code}&state={state}` |
 | --------------------------------------------------- |
 
-#### Access Token Request <a href="authentication-accesstokenrequest" id="authentication-accesstokenrequest"></a>
+#### Access Token Request <a href="#authentication-accesstokenrequest" id="authentication-accesstokenrequest"></a>
 
 If the client application has been successfully authorized, it sends a request with the following parameters in the body to the token endpoint using the `application/x-www-form-urlencoded` format.
 
@@ -113,7 +113,7 @@ POST https://api.awork.io/api/v1/accounts/tokenredirect_uri={redirect_uri}  &gra
 
 **Note:** All query parameters (especially the `redirect_uri`) should be properly URL-encoded.
 
-#### Access Token Response <a href="authentication-accesstokenresponse" id="authentication-accesstokenresponse"></a>
+#### Access Token Response <a href="#authentication-accesstokenresponse" id="authentication-accesstokenresponse"></a>
 
 If the access token request is valid and authorized, the authorization server issues an Access Token and Refresh Token. If the request failed or is invalid, the authorization server returns an error response.
 
@@ -129,7 +129,7 @@ If the access token request is valid and authorized, the authorization server is
 
 After receiving the Access Token, you can use it to request resources from the API.
 
-#### Resource Request <a href="authentication-resourcerequest" id="authentication-resourcerequest"></a>
+#### Resource Request <a href="#authentication-resourcerequest" id="authentication-resourcerequest"></a>
 
 To receive resources from the API, add the Access Token to the Authorization header in the following form:
 

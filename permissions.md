@@ -5,12 +5,12 @@
 The Permissions allow you to define user access to certain features.\
 To simplify this, we use a role-based approach that allows a collection of users to be handled by the same collection of permissions.
 
-![](https://developers.awork.io/wp-content/uploads/2018/03/permissions-1024x335.png)
+![](.gitbook/assets/permissions.png)
 
 #### Permissions
 
-In awork, we have two permissions: **read **and **manage**. With the **read **permissions of a feature, you have access to all _GET_ endpoints which are related to this feature.\
-To get access to the _POST_,_PUT_, _DELETE,_ and Business Operation endpoints, **manage **permissions for this feature is required.
+In awork, we have two permissions: **read** and **manage**. With the **read** permissions of a feature, you have access to all _GET_ endpoints which are related to this feature.\
+To get access to the _POST_,_PUT_, _DELETE,_ and Business Operation endpoints, **manage** permissions for this feature is required.
 
 #### Features
 
