@@ -1,7 +1,7 @@
 ---
 description: >-
   This page contains a list of past and upcoming changes of our API. We try our
-  best to prevent breaking changes, but sometimes we need them in order to
+  best to prevent breaking changes, but sometimes we can't avoid it in order to
   release a new awesome feature 🚀
 ---
 
@@ -10,12 +10,33 @@ description: >-
 ## Upcoming changes
 
 {% hint style="info" %}
-In this section you find upcoming changes. Breaking changes are marked additionally 🚨
+This section shows upcoming changes. Breaking changes are additionally marked 🚨
+{% endhint %}
+
+### User Capacity - Property Removed New Endpoint 🚨
+
+The `User` model currently has a `CapacityPerWeek` property, which we're removing soon. This property is getting it's own endpoint: `/users/{userId}/capacity`
+
+This endpoint has `GET` and `PUT` methods to retrieve and edit the user's weekly capacity. The `GET` model looks like this:
+
+```javascript
+{
+  "userId": "b9fd0955-9252-4746-aba5-f6b82ba24d56",
+  "capacityPerWeek": 144000
+}
+```
+
+For a short time, both the property and the new endpoints will exist in parallel to be backward-compatible. We will remove the old property starting in **March 2022**. Please update your API client accordingly.
+
+## Recent changes
+
+{% hint style="info" %}
+This section shows you recent changes that are already live in our API
 {% endhint %}
 
 ### Project Templates - Auto Billability 🚨
 
-Currently, projects have one property called `IsBillableByDefault `,which decides whether time entries created on that project are marked as billable or not. This is either set by the project template, or if no project template was used for creation, by whether the project has a company or not. In the case of a company, the times are marked as billed, otherwise the times are marked as not billable.
+Currently, projects have one property called `IsBillableByDefault` ,which decides whether time entries created on that project are marked as billable or not. This is either set by the project template, or if no project template was used for creation, by whether the project has a company or not. In the case of a company, the times are marked as billed, otherwise the times are marked as not billable.
 
 The problem is, that the project template always overrules this company rule. We need to have more flexibility here, so we change the `IsBillableByDefault` property on the project template from a `boolean` to a `string` field with the possible values: `on, off, auto`.
 
@@ -167,13 +188,7 @@ Additionally, these automation models were changed 🚨
 
 For the action `assign-user-to-task`, there is now an additional `ActionValue` `removeOldAssignments`. In order to assign multiple users to a task, you need the set this value to `false`. You can also add multiple `assign-user-to-task` actions to an automation in order to assign multiple users for a single trigger.
 
-For the actions `task-create-project` and `task-create-private`, the `task` `ActionValue` now has an array `assigneeIds` instead of a single` assigneeId`. However, you cannot assign multiple users to private tasks.
-
-## Recent changes
-
-{% hint style="info" %}
-This section shows you past changes that are already live in our API
-{% endhint %}
+For the actions `task-create-project` and `task-create-private`, the `task` `ActionValue` now has an array `assigneeIds` instead of a single `assigneeId`. However, you cannot assign multiple users to private tasks.
 
 ### Project Templates - 18.07.21 🚨
 
