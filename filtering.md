@@ -14,7 +14,16 @@ You can also combine different expressions. Precedence is defined with '()'.
 https://awork.io/api/v1/products?filterby=Price le 200 and Price gt 3.5 
 ```
 
-#### Data Types
+{% hint style="info" %}
+Important: Characters like ?, & and = within a string filter value need to be properly url encoded.&#x20;
+{% endhint %}
+
+```
+filterby=name eq 'awork & co' <- incorrect
+filterby=name eq 'awork %26 co' <- correct
+```
+
+#### Data types
 
 * **Null** null
 * **Boolean** true|false
