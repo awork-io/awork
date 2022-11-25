@@ -5,19 +5,13 @@ The awork API supports a huge set of filters that can be executed on all our API
 Every filter can be applied by adding a _filterby_ expression to the request url:
 
 ```
- https://awork.io/api/v1/users?filterby=FirstName eq 'Sebastian'
+ https://awork.io/api/v1/users?filterby=FirstName eq 'Sebastian'.
 ```
 
 You can also combine different expressions. Precedence is defined with '()'.
 
 ```
 https://awork.io/api/v1/products?filterby=Price le 200 and Price gt 3.5 
-```
-
-You can invert the expression by using a _not_ before the statement
-
-```
- https://awork.io/api/v1/users?filterby=not FirstName eq 'Sebastian'
 ```
 
 {% hint style="info" %}

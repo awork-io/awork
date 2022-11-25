@@ -13,6 +13,33 @@ description: >-
 This section shows upcoming changes. Breaking changes are additionally marked 🚨
 {% endhint %}
 
+### Workload calculation - Single user calculation removal  🚨
+
+We are deprecating the endpoint&#x20;
+
+`GET /users/{userId}/workload`&#x20;
+
+in favour of the new one:&#x20;
+
+`GET /users/workload`&#x20;
+
+This new endpoint will provide multiple user results in a single call, plus it has the option to fetch the details of the workload calculation.
+
+The legacy endpoint will still be active up to **01.01.2023.** \
+****Then it will be removed.
+
+### Project Member Capacity - Endpoints removal 🚨
+
+With the introduction of the project time bookings, we are migrating all the project member capacities to them.&#x20;
+
+As such, all the related endpoints are being deprecated and will not have any meaningful effect on the workload calculations:
+
+* `GET /projects/{projectId}/members/{projectMemberId}/capacity`
+* `PUT /projects/{projectId}/members/{projectMemberId}/capacity`
+* `GET /projects/{projectId}/members/capacities`
+
+We will remove those endpoints and the related data starting from **01.01.2023**
+
 ### User Capacity - Property Removed New Endpoint 🚨
 
 The `User` model currently has a `CapacityPerWeek` property, which we're removing soon. This property is getting it's own endpoint: `/users/{userId}/capacity`
