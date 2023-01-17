@@ -13,6 +13,16 @@ description: >-
 This section shows upcoming changes. Breaking changes are additionally marked 🚨
 {% endhint %}
 
+### Subtasks become Checklists 🚨
+
+We are adding a new feature called Subtasks, therefore we are renaming the currently existing Subtasks to Checklists. The new Subtasks will be more powerful and bring a new level of planning to awork.
+
+In the following endpoints, `subtasks` will be renamed to `checklists`. The functionality remains the same.
+
+<figure><img src=".gitbook/assets/Screenshot 2023-01-17 at 15.47.53.png" alt=""><figcaption></figcaption></figure>
+
+This change is happening in the API on **10.02.2023 in the evening**.
+
 ### Workload calculation - Single user calculation removal  🚨
 
 We are deprecating the endpoint&#x20;
