@@ -23,6 +23,14 @@ In the following endpoints, `subtasks` will be renamed to `checklists`. The func
 
 This change is happening in the API on **10.02.2023 in the evening**.
 
+
+
+## Recent changes
+
+{% hint style="info" %}
+This section shows you recent changes that are already live in our API
+{% endhint %}
+
 ### Workload calculation - Single user calculation removal  🚨
 
 We are deprecating the endpoint&#x20;
@@ -64,12 +72,6 @@ This endpoint has `GET` and `PUT` methods to retrieve and edit the user's weekly
 ```
 
 For a short time, both the property and the new endpoints will exist in parallel to be backward-compatible. We will remove the old property starting in **March 2022**. Please update your API client accordingly.
-
-## Recent changes
-
-{% hint style="info" %}
-This section shows you recent changes that are already live in our API
-{% endhint %}
 
 ### Project Templates - Auto Billability 🚨
 
