@@ -93,8 +93,10 @@ If the user grants the authorization request, the authorization server issues an
 * `code`: The `Authorization Code` that will be exchanged for an `Access Token` in the next request.
 * `state`: The same arbitrary state string that the client application passed in the authorization request earlier.
 
-| `302 Found {redirect_uri}?code={code}&state={state}` |
-| ---------------------------------------------------- |
+```
+302 Found
+Location: {redirect_uri}?code={code}&state={state}
+```
 
 #### Access Token Request <a href="#authentication-accesstokenrequest" id="authentication-accesstokenrequest"></a>
 
