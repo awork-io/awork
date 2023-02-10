@@ -1,9 +1,9 @@
 # Authentication
 
-You have two options to access our api.&#x20;
+You have two options for accessing our API.&#x20;
 
-* Fixed token generated in the UI, which is permanently valid but is not user specific. This makes sense for background synchronization applications. You can find more details [here](https://support.awork.io/en/articles/5415664-client-applications-and-api-keys).
-* OAuth 2
+* A fixed token generated in the UI, which is permanently valid but is not user-specific. This makes sense for background synchronization applications. You can find more details [here](https://support.awork.io/en/articles/5415664-client-applications-and-api-keys).
+* An OAuth 2 flow that allows users to sign in with their own account. This generates a user-specific token which respects all permissions.
 
 ```aspnet
 // The token can be used in the Authorization Header:
@@ -42,7 +42,7 @@ The `Access Token` is used to authenticate yourself within the API resources. It
 
 **Refresh Token**
 
-The `Refresh Token` is used to get a new `Access Token`once that one has expired. A `Refresh Token` only expires when the user manually revokes access for the client application.
+The `Refresh Token` is used to get a new `Access Token` once that one has expired. A `Refresh Token` only expires when the user manually revokes access for the client application.
 
 **Authorization Code**
 
@@ -52,9 +52,9 @@ The `Authorization Code` is a transitory code used to retrieve an `Access Token`
 
 The OAuth endpoints are required to get an `Access Token` and exchange a `Refresh Token` for a new `Access Token`:
 
-**`Authorization Endpoint:`**` ``/accounts/authorize` may be used to initially retrieve an Authorization Code.
+**Authorization Endpoint:** `/accounts/authorize` may be used to request user authorization and initially retrieve an `Authorization Code`.
 
-**`Token Endpoint:`**` ``/accounts/token` may be used to retrieve an Access Token from either an Authorization Code or a Refresh Token.
+**Token Endpoint:** `/accounts/token` may be used to retrieve an `Access Token` from either an `Authorization Code` or a `Refresh Token`.
 
 ### Authorization Code Flow <a href="#authentication-authorizationcodeflow" id="authentication-authorizationcodeflow"></a>
 
@@ -64,22 +64,24 @@ The client constructs the request URI by adding the following parameters to the 
 
 **Parameter:**
 
-* `client_id`: The client Id of the client application - Required.
-* `redirect_uri`: The user will be redirected to a custom URI after the access was granted. Needs to be the same as specified when registering the client application - Required.
-* `scope`: A space-separated list of API scopes - Required.
-* `state`: An arbitrary state string that helps the client application to identify the request - Optional.
+* `client_id`: The client Id of the client application. Required.
+* `redirect_uri`: The user will be redirected to a custom URI after the access was granted. Needs to be the same as specified when registering the client application. Required.
+* `scope`: A space-separated list of API scopes. See the available scopes above. Required.
+* `state`: An arbitrary state string that helps the client application identify the request. Optional.
 
+{% code overflow="wrap" %}
 ```
-https://api.awork.io/api/v1/accounts/authorize?client_id={client_id}&response_type=code&grant_type=authorization_code&redirect_uri={redirect_uri}&state={state}&scope={scope}
+GET https://api.awork.io/api/v1/accounts/authorize?client_id={client_id}&response_type=code&grant_type=authorization_code&redirect_uri={redirect_uri}&state={state}&scope={scope}
 ```
+{% endcode %}
 
 **Note:** The generated URL needs to be opened in a browser window. The user has to log in to authorize the application.
 
-All query parameters (especially the `redirect_uri`) may be properly URL-encoded.
+All query parameters (especially the `redirect_uri`) must be properly URL-encoded.
 
 #### User Authentication <a href="#authentication-userauthentication" id="authentication-userauthentication"></a>
 
-The user logs in, and can then grant or revoke the authorization request.
+The user logs in and can then grant or revoke the authorization request.
 
 #### Authorization Response <a href="#authentication-authorizationresponse" id="authentication-authorizationresponse"></a>
 
@@ -88,11 +90,11 @@ If the user grants the authorization request, the authorization server issues an
 **Parameter:**
 
 * `redirect_uri`: The previously specified redirect URI.
-* `code`: The authentication code that can be exchanged for a token later.
+* `code`: The `Authorization Code` that will be exchanged for an `Access Token` in the next request.
 * `state`: The same arbitrary state string that the client application passed in the authorization request earlier.
 
-| `302 Found{redirect_uri}?code={code}&state={state}` |
-| --------------------------------------------------- |
+| `302 Found {redirect_uri}?code={code}&state={state}` |
+| ---------------------------------------------------- |
 
 #### Access Token Request <a href="#authentication-accesstokenrequest" id="authentication-accesstokenrequest"></a>
 
@@ -100,22 +102,30 @@ If the client application has been successfully authorized, it sends a request w
 
 **Parameter:**
 
-* `code`: The code that was received in the previous authorization response. Required.
+* `code`: The `Authorization Code` that was received in the previous authorization response. Required.
 * `redirect_uri`: The previously specified redirect URI. Required.
 * `client_id`: The client Id of the client application. Required.
 * `client_secret`: The client secret of the client application. Required.
 
-**Note:** To build a proper HTTP Authorization header for [Basic Access Authentication](https://en.wikipedia.org/wiki/Basic\_access\_authentication), you need to encode your `client_id` and `client_secret` using [Base64](https://en.wikipedia.org/wiki/Base64), and add it to the `Authorization` header as follows: `Authorization: Basic Base64({AppId}:{AppSecret})`
+**Note:** To build a proper HTTP `Authorization` header for [Basic Access Authentication](https://en.wikipedia.org/wiki/Basic\_access\_authentication), you need to encode your `client_id` and `client_secret` using [Base64](https://en.wikipedia.org/wiki/Base64), and add it to the `Authorization` header as follows: `Authorization: Basic Base64({client_id}:{client_secret})`
 
+{% code overflow="wrap" %}
 ```
-POST https://api.awork.io/api/v1/accounts/tokenredirect_uri={redirect_uri}  &grant_type=authorization_code  &code={code}Authorization: Basic Base64({client_id}:{client_secret})
-```
+POST https://api.awork.io/api/v1/accounts/token
 
-**Note:** All query parameters (especially the `redirect_uri`) should be properly URL-encoded.
+redirect_uri={redirect_uri}
+&grant_type=authorization_code
+&code={code}
+
+Authorization: Basic Base64({client_id}:{client_secret})
+```
+{% endcode %}
+
+**Note:** All query parameters (especially the `redirect_uri`) must be properly URL-encoded.
 
 #### Access Token Response <a href="#authentication-accesstokenresponse" id="authentication-accesstokenresponse"></a>
 
-If the access token request is valid and authorized, the authorization server issues an Access Token and Refresh Token. If the request failed or is invalid, the authorization server returns an error response.
+If the access token request is valid and authorized, the authorization server issues an `Access Token` and `Refresh Token`. If the request failed or is invalid, the authorization server returns an error response.
 
 ```
 {
@@ -127,14 +137,39 @@ If the access token request is valid and authorized, the authorization server is
 }
 ```
 
-After receiving the Access Token, you can use it to request resources from the API.
+After receiving the `Access Token`, you can use it to request resources from the API.
 
 #### Resource Request <a href="#authentication-resourcerequest" id="authentication-resourcerequest"></a>
 
-To receive resources from the API, add the Access Token to the Authorization header in the following form:
+To receive resources from the API, add the `Access Token` to the `Authorization` header in the following form:
 
 ```
 Authorization: Bearer {access_token}
 ```
 
-**Note**: Access Tokens expires and will need to be refreshed with the Refresh Token.
+**Note**: Access Tokens expires and will need to be refreshed with the `Refresh Token`. See the next step.
+
+#### Refresh Token Request <a href="#authentication-resourcerequest" id="authentication-resourcerequest"></a>
+
+When the `Access Token` has expired, you must use the `Refresh Token` to retrieve a new `Access Token`.
+
+```
+POST https://api.awork.io/api/v1/accounts/token
+
+grant_type=refresh_token
+&refresh_token={refresh_token}
+&client_id={client_id}
+&client_secret={client_secret}
+```
+
+#### Refresh Token Response
+
+The authorization server responds with a new `Access Token` and a new expiration.
+
+```
+{
+    "access_token": "eyJhbGciOiJ...",
+    "token_type": "Bearer",
+    "expires_in": 86400,
+}
+```
