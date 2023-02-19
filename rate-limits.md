@@ -11,13 +11,14 @@ Other limits can apply to certain endpoints or can be introduced temporarily to 
 
 The API responds with `429 Too Many Requests` when the limit has been reached. The response also contains headers that explain the rate limit, including the time until the limit resets, in seconds (`RateLimit-Reset`).
 
-<pre><code>RateLimit-Limit: 500
+```
+RateLimit-Limit: 500
 RateLimit-Remaining: 499
-<strong>RateLimit-Reset: 47
-</strong>X-RateLimit-Limit-Second: 500
+RateLimit-Reset: 47
+X-RateLimit-Limit-Second: 500
 X-RateLimit-Remaining-Second: 499
 X-RateLimit-Limit-Minute: 1000
 X-RateLimit-Remaining-Minute: 999
-</code></pre>
+```
 
 We recommend developers of client applications to read these header values and use a back-off time to fail gracefully and wait for the limit to reset to continue making requests.
