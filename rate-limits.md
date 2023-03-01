@@ -1,6 +1,6 @@
 # Rate Limits
 
-The awork API limits the number of requests external API clients can make to a workspace. These limits depend on the plan of the workspace. The limits are shared by all external client applications access the workspace.
+The awork API limits the number of requests external API clients can make to a workspace. These limits depend on the plan of the workspace. The limits are shared by all external client applications across the workspace.
 
 | Plan       | Limit                   |
 | ---------- | ----------------------- |

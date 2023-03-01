@@ -21,9 +21,13 @@ In the following endpoints, `subtasks` will be renamed to `checklists`. The func
 
 <figure><img src=".gitbook/assets/Screenshot 2023-01-17 at 15.47.53.png" alt=""><figcaption></figcaption></figure>
 
-This change is happening in the API on **10.02.2023 in the evening**.
+This change is happening in the API on **03.03.2023 in the evening**.
 
+### API Rate Limits for API clients  🚨
 
+We are introducing API rate limits that will limit the number of requests external API clients can make to a workspace. These limits depend on the plan of the workspace. The limits are shared by all external client applications across the workspace. Please see [Rate Limits](rate-limits.md) for details.
+
+This change is happening in the API on **03.03.2023 in the evening**.
 
 ## Recent changes
 
