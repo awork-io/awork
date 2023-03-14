@@ -114,12 +114,12 @@ If the client application has been successfully authorized, it sends a request w
 {% code overflow="wrap" %}
 ```
 POST https://api.awork.io/api/v1/accounts/token
+Authorization: Basic Base64({client_id}:{client_secret})
+Content-Type: application/x-www-form-urlencoded
 
 redirect_uri={redirect_uri}
 &grant_type=authorization_code
 &code={code}
-
-Authorization: Basic Base64({client_id}:{client_secret})
 ```
 {% endcode %}
 
@@ -153,15 +153,15 @@ Authorization: Bearer {access_token}
 
 #### Refresh Token Request <a href="#authentication-resourcerequest" id="authentication-resourcerequest"></a>
 
-When the `Access Token` has expired, you must use the `Refresh Token` to retrieve a new `Access Token`.
+When the `Access Token` has expired, you must use the `Refresh Token` to retrieve a new `Access Token`. The application sends a request with the following parameters in the body to the token endpoint using the `application/x-www-form-urlencoded` format. Same as in the Access Token Request, you need to send the client credentials in the `Authorization` header.
 
 ```
 POST https://api.awork.io/api/v1/accounts/token
+Authorization: Basic Base64({client_id}:{client_secret})
+Content-Type: application/x-www-form-urlencoded
 
 grant_type=refresh_token
 &refresh_token={refresh_token}
-&client_id={client_id}
-&client_secret={client_secret}
 ```
 
 #### Refresh Token Response
