@@ -13,6 +13,32 @@ description: >-
 This section shows upcoming changes. Breaking changes are additionally marked 🚨
 {% endhint %}
 
+### Tasks: EntityId is deprecated 🚨
+
+The `EntityId` in the Task model is deprecated and will be removed in the future. Use `UserId` for private tasks and `ProjectId` for project tasks instead.
+
+### Tasks: several nested fields removed 🚨
+
+The following nested fields have been removed from the model for performance reasons:
+
+```
+Task.Project.Teams
+Task.Project.Tags
+Task.Company.Tags
+Task.Assignees.Teams
+Task.Assignees.Tags
+```
+
+These changes are happening in the API on **05.05.2023 in the evening**.
+
+
+
+## Recent changes
+
+{% hint style="info" %}
+This section shows you recent changes that are already live in our API
+{% endhint %}
+
 ### Subtasks become Checklists 🚨
 
 We are adding a new feature called Subtasks, therefore we are renaming the currently existing Subtasks to Checklists. The new Subtasks will be more powerful and bring a new level of planning to awork.
@@ -29,12 +55,6 @@ We are introducing API rate limits that will limit the number of requests extern
 
 This change is happening in the API on **03.03.2023 in the evening**.
 
-## Recent changes
-
-{% hint style="info" %}
-This section shows you recent changes that are already live in our API
-{% endhint %}
-
 ### Workload calculation - Single user calculation removal  🚨
 
 We are deprecating the endpoint&#x20;
@@ -48,7 +68,7 @@ in favour of the new one:&#x20;
 This new endpoint will provide multiple user results in a single call, plus it has the option to fetch the details of the workload calculation.
 
 The legacy endpoint will still be active up to **01.01.2023.** \
-****Then it will be removed.
+Then it will be removed.
 
 ### Project Member Capacity - Endpoints removal 🚨
 
