@@ -11,7 +11,6 @@ To give some further information on the cause of the error, the API also returns
     "code": "validation-failed",
     "description": "The model sent in the request is invalid. See the validation errors for details.",
     "link": "https://developers.awork.io/#response-types",
-    "space": "On Venus a day is longer than a year.",
     "details": [
         "Some more details about the error can go here.",
         "Or here."
@@ -29,7 +28,6 @@ To give some further information on the cause of the error, the API also returns
   For example:
   * Identity cannot be invited to this workspace. The identity is already part of the workspace.
   * The password is too simple
-* **Space:** An interesting fact about space.
 * **Link:** A link to the corresponding documentation.
 * **Details:** Further explanations or hints on fixing the request.
 * **ValidationErrors:** If the model validation failed, all violations are listed here.
