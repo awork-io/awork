@@ -13,9 +13,23 @@ description: >-
 This section shows upcoming changes. Breaking changes are additionally marked 🚨
 {% endhint %}
 
+### Projects, Tasks and Users: Key and NumberCount properties removed
+
+The `Key` property of Projects, Tasks and Users as well as the `NumberCount` property of Tasks have been removed. These properties were never used in the awork web app, so we're removing them from the API models as well.
+
+These changes are happening in the API on **26.05.2023 in the evening**.
+
+## Recent changes
+
+{% hint style="info" %}
+This section shows you recent changes that are already live in our API
+{% endhint %}
+
 ### Tasks: EntityId is deprecated 🚨
 
 The `EntityId` in the Task model is deprecated and will be removed in the future. Use `UserId` for private tasks and `ProjectId` for project tasks instead.
+
+These changes are happening in the API on **05.05.2023 in the evening**.
 
 ### Tasks: several nested fields removed 🚨
 
@@ -30,14 +44,6 @@ Task.Assignees.Tags
 ```
 
 These changes are happening in the API on **05.05.2023 in the evening**.
-
-
-
-## Recent changes
-
-{% hint style="info" %}
-This section shows you recent changes that are already live in our API
-{% endhint %}
 
 ### Subtasks become Checklists 🚨
 
