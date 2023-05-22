@@ -13,6 +13,12 @@ description: >-
 This section shows upcoming changes. Breaking changes are additionally marked 🚨
 {% endhint %}
 
+### ResourceVersion property removed
+
+We are going to remove the `ResourceVersion` property from all API models.
+
+These changes are happening in the API in the future, release date tbd.
+
 ### Projects, Tasks and Users: Key and NumberCount properties removed
 
 The `Key` property of Projects, Tasks and Users as well as the `NumberCount` property of Tasks have been removed. These properties were never used in the awork web app, so we're removing them from the API models as well.
