@@ -11,5 +11,5 @@
 * [Permissions](permissions.md)
 * [API Changes](api-changes.md)
 * [API Endpoints](http://openapi.awork.io/)
-* [Imprint](https://www.awork.io/rechtliches/impressum/)
 * [Subscribe to Updates](https://form.123formbuilder.com/form-6455567/api-newsletter-signup)
+* [Imprint](https://www.awork.io/rechtliches/impressum/)
