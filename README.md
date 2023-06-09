@@ -11,5 +11,6 @@ Before you get started, you’ll need to follow the following steps:
 * Create an account in [awork.](https://awork.io/)
 * Check out the article about [Authentication](authentication.md).
 * Check out how the [API](https://openapi.awork.io/) works.
+* [Subscribe](https://form.123formbuilder.com/form-6455567/api-newsletter-signup) to Updates and other Developer News.
 
 If you have any questions to our api, simply create an _issue_ on [Github](https://github.com/awork-io/awork/issues)

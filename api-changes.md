@@ -7,29 +7,29 @@ description: >-
 
 # API Changes
 
-## Upcoming changes
-
 {% hint style="info" %}
-This section shows upcoming changes. Breaking changes are additionally marked 🚨
+[Subscribe](https://form.123formbuilder.com/form-6455567/api-newsletter-signup) to Updates and other Developer News
 {% endhint %}
 
-### ResourceVersion property removed
+## Upcoming changes
+
+This section shows upcoming changes. Breaking changes are additionally marked with 🚨.
+
+### ResourceVersion property removed 🚨
 
 We are going to remove the `ResourceVersion` property from all API models.
 
 These changes are happening in the API in the future, release date tbd.
 
-### Projects, Tasks and Users: Key and NumberCount properties removed
+## Recent changes
+
+This section shows you recent changes that are already live in our API.
+
+### Projects, Tasks and Users: Key and NumberCount properties removed 🚨
 
 The `Key` property of Projects, Tasks and Users as well as the `NumberCount` property of Tasks have been removed. These properties were never used in the awork web app, so we're removing them from the API models as well.
 
 These changes are happening in the API on **26.05.2023 in the evening**.
-
-## Recent changes
-
-{% hint style="info" %}
-This section shows you recent changes that are already live in our API
-{% endhint %}
 
 ### Tasks: EntityId is deprecated 🚨
 
