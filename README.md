@@ -10,7 +10,7 @@ Before you get started, you’ll need to follow the following steps:
 
 * Create an account in [awork.](https://awork.io/)
 * Check out the article about [Authentication](authentication.md).
-* Check out how the [API](https://openapi.awork.io/) works or import it to Postman or other clients: [https://awork-function-swaggercombine-global.azurewebsites.net/api/swagger-combine](https://awork-function-swaggercombine-global.azurewebsites.net/api/swagger-combine)
+* Check out how the [API](https://openapi.awork.io/) works or import it to Postman or other clients: [https://swagger-doc.awork.io/api/swagger-combine](https://swagger-doc.awork.io/api/swagger-combine)
 * [Subscribe](https://form.123formbuilder.com/form-6455567/api-newsletter-signup) to Updates and other Developer News.
 
 If you have any questions to our api, simply create an _issue_ on [Github](https://github.com/awork-io/awork/issues)
