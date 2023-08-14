@@ -7,11 +7,11 @@ Other values are usually sent in the body of the request, which are only accepte
 
 The URL of our API is composed of three different segments:
 
-* The base URL: https://api.awork.io/api/v1
-* The content/resource url: /users
-* The filter query (optional):?page=1\&pageSize=50
+* The base URL: `https://api.awork.io/api/v1`
+* The content/resource url: `/users`
+* The filter query (optional): `?page=1&pageSize=50`
 
-The complete URL can look like this: https://api.awork.io/api/v1/users?page=1\&pageSize=50
+The complete URL can look like this: `https://api.awork.io/api/v1/users?page=1&pageSize=50`
 
 ### CRUD Calls vs. Business Operations
 

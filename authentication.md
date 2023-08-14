@@ -71,7 +71,7 @@ The client constructs the request URI by adding the following parameters to the 
 
 {% code overflow="wrap" %}
 ```
-GET https://api.awork.io/api/v1/accounts/authorize?client_id={client_id}&response_type=code&grant_type=authorization_code&redirect_uri={redirect_uri}&state={state}&scope={scope}
+GET /accounts/authorize?client_id={client_id}&response_type=code&grant_type=authorization_code&redirect_uri={redirect_uri}&state={state}&scope={scope}
 ```
 {% endcode %}
 
@@ -113,7 +113,7 @@ If the client application has been successfully authorized, it sends a request w
 
 {% code overflow="wrap" %}
 ```
-POST https://api.awork.io/api/v1/accounts/token
+POST /accounts/token
 Authorization: Basic Base64({client_id}:{client_secret})
 Content-Type: application/x-www-form-urlencoded
 
@@ -156,7 +156,7 @@ Authorization: Bearer {access_token}
 When the `Access Token` has expired, you must use the `Refresh Token` to retrieve a new `Access Token`. The application sends a request with the following parameters in the body to the token endpoint using the `application/x-www-form-urlencoded` format. Same as in the Access Token Request, you need to send the client credentials in the `Authorization` header.
 
 ```
-POST https://api.awork.io/api/v1/accounts/token
+POST /accounts/token
 Authorization: Basic Base64({client_id}:{client_secret})
 Content-Type: application/x-www-form-urlencoded
 

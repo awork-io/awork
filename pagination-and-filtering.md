@@ -9,7 +9,7 @@ For example, if you get all the projects, the response could end up with hundred
 
 You can set the number of items that you would like to get from the API via two properties: page and pageSize.
 
-For example, if you want to get 50 users, you would end up making a call with the following url: `https://api.awork.io/api/v1/users?page=1&pageSize=50`.\
+For example, if you want to get 50 users, you would end up making a call with the following url: `/users?page=1&pageSize=50`.\
 When you make a call to retrieve the users from the API, you get the response as well as its headers. The headers of the response contain a property named `aw-totalitems`, which provides the information about the maximum retrievable results.
 
 | Name       | Type            | Description                                                      |

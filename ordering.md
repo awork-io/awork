@@ -5,7 +5,7 @@ The awork API supports ordering for most of the endpoints that return a list of 
 The following statement orders by the `LastName` property of the users in ascending order. If no ascending `asc` or descending `desc` order is defined, `asc` is chosen as a default.
 
 ```
-https://awork.io/api/v1/users?orderby=LastName asc
+/users?orderby=LastName asc
 ```
 
 You can also add multiple order statements by listing the properties separated with a `,` . Keep in mind that we do not allow spaces before or after the `,` .
@@ -13,11 +13,11 @@ You can also add multiple order statements by listing the properties separated w
 The following url filters by LastName ascending first and then by FirstName descending.
 
 ```
-https://awork.io/api/v1/users?orderby=LastName,FirstName desc
+/users?orderby=LastName,FirstName desc
 ```
 
 If you want to order by a nested property, you can do this by separating the Properties by `/` .
 
 ```
-https://awork.io/api/v1/projects?orderby=ProjectStatus/Type desc
+/projects?orderby=ProjectStatus/Type desc
 ```
