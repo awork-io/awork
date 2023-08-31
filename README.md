@@ -1,12 +1,10 @@
-# README
-
-![Logo](https://cdn.awork.com/assets/images/visuals/aworkLogoB-1.svg)
+![Logo](https://cdn.awork.com/img/logo/blue/complete/blue-complete.svg)
 
 [awork](https://www.awork.com/) is an awesome work management tool that helps you to be more productive. Next to a [web app](https://app.awork.com/) and an app for [iOS](https://apps.apple.com/de/app/awork-organisiere-dein-team/id1466945183) and [Android](https://play.google.com/store/apps/details?id=io.awork\&hl=gsw\&gl=US), we also provide a rich API that enables external developers to integrate awork into their workflows. Here you can find more details, FAQ's, code examples and a help forum to get you started even faster.
 
 Detailed infos about the API can be found in our [Developer Docs](https://developers.awork.com/). If you have general questions about how awork works, check out our [Help Center](https://support.awork.com/en).
 
-If you have any questions or need help, feel free to open an issue in the [Issues Tab](https://github.com/awork-io/awork/issues)
+If you have any questions or need help, feel free to open an issue in the [Issues Tab](https://github.com/awork-io/awork/issues).
 
 We currently have code examples for C# and Typescript. You can find them in the examples folder above.
 
