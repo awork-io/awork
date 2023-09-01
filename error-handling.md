@@ -10,7 +10,7 @@ To give some further information on the cause of the error, the API also returns
 {
     "code": "validation-failed",
     "description": "The model sent in the request is invalid. See the validation errors for details.",
-    "link": "https://developers.awork.io/#response-types",
+    "link": "https://developers.awork.com/#response-types",
     "details": [
         "Some more details about the error can go here.",
         "Or here."

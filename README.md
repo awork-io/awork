@@ -1,4 +1,4 @@
-# awork.io Developer Docs
+# awork.com Developer Docs
 
 ![](.gitbook/assets/new-bg.png)
 
@@ -8,9 +8,9 @@ At awork, we do our best to build a powerful and easy-to-use public API. What do
 
 Before you get started, you’ll need to follow the following steps:
 
-* Create an account in [awork.](https://awork.io/)
+* Create an account in [awork.](https://www.awork.com)
 * Check out the article about [Authentication](authentication.md).
-* Check out how the [API](https://openapi.awork.io/) works or import it to Postman or other clients: [https://swagger-doc.awork.io/api/swagger-combine](https://swagger-doc.awork.io/api/swagger-combine)
+* Check out how the [API](https://openapi.awork.com) works or import it to Postman or other clients as a [Swagger](https://swagger-doc.awork.com/api/swagger-combine) doc.
 * [Subscribe](https://form.123formbuilder.com/form-6455567/api-newsletter-signup) to Updates and other Developer News.
 
-If you have any questions to our api, simply create an _issue_ on [Github](https://github.com/awork-io/awork/issues)
+If you have any questions about the awork API, simply create an _issue_ on [Github](https://github.com/awork-io/awork/issues).

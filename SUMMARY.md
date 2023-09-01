@@ -1,6 +1,6 @@
 # Table of contents
 
-* [awork.io Developer Docs](README.md)
+* [awork.com Developer Docs](README.md)
 * [Description](description.md)
 * [Authentication](authentication.md)
 * [Error Handling](error-handling.md)
@@ -10,6 +10,6 @@
 * [Rate Limits](rate-limits.md)
 * [Permissions](permissions.md)
 * [API Changes](api-changes.md)
-* [API Endpoints](http://openapi.awork.io/)
+* [API Endpoints](https://openapi.awork.com)
 * [Subscribe to Updates](https://form.123formbuilder.com/form-6455567/api-newsletter-signup)
-* [Imprint](https://www.awork.io/rechtliches/impressum/)
+* [Imprint](https://www.awork.com/legal-and-privacy/imprint)

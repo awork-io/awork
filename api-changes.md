@@ -25,6 +25,10 @@ These changes are happening in the API in the future, release date tbd.
 
 This section shows you recent changes that are already live in our API.
 
+#### Domain changed to awork.com: clients need to update URLs 🚨
+
+We have recently switched our primary domain from `awork.io` to `awork.com`. The application and website remain available at both domains for the time being, by end of January 2024, clients must have updated to `awork.com` to continue using the awork API.
+
 ### Projects, Tasks and Users: Key and NumberCount properties removed 🚨
 
 The `Key` property of Projects, Tasks and Users as well as the `NumberCount` property of Tasks have been removed. These properties were never used in the awork web app, so we're removing them from the API models as well.
@@ -463,5 +467,5 @@ The id of the project template.
 {% endswagger %}
 
 {% hint style="info" %}
-Older changes can be found in the release articles on our roadmap [https://www.awork.io/roadmap/](https://www.awork.io/roadmap/) 🕵🏻‍♂️
+Older changes can be found in the release articles on our roadmap [https://www.awork.com/roadmap/](https://www.awork.com/roadmap) 🕵🏻‍♂️
 {% endhint %}

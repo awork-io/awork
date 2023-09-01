@@ -2,7 +2,7 @@
 
 You have two options for accessing our API.&#x20;
 
-* A fixed token generated in the UI, which is permanently valid but is not user-specific. This makes sense for background synchronization applications. You can find more details [here](https://support.awork.io/en/articles/5415664-client-applications-and-api-keys).
+* A fixed token generated in the UI, which is permanently valid but is not user-specific. This makes sense for background synchronization applications. You can find more details [here](https://support.awork.com/en/articles/5415664-client-applications-and-api-keys).
 * An OAuth 2 flow that allows users to sign in with their own account. This generates a user-specific token which respects all permissions.
 
 ```aspnet
