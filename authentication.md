@@ -133,7 +133,7 @@ If the access token request is valid and authorized, the authorization server is
 {
     "access_token": "eyJhbGciOiJ...",
     "token_type": "Bearer",
-    "resource": "awork.io",
+    "resource": "awork.com",
     "expires_in": 86400,
     "refresh_token": "eyJhbGciOiJ..."
 }
