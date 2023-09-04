@@ -40,7 +40,7 @@ Now you can reach the next page by setting `page=2` and keeping the page size th
 
 #### How can I filter my API request?
 
-The API supports filtering using the following syntax. You can filter most of the API endpoints by adding an additional filter attribute to your request: `filterby=...` More filter options can be found in the [Filter section](https://developers.awork.com/filtering) of the Developer Docs.
+The API supports filtering using the following syntax. You can filter most of the API endpoints by adding an additional filter attribute to your request: `filterby=...` More filter options can be found in the [Filtering](https://developers.awork.com/filtering) section of the Developer Docs.
 
 ```
 https://api.awork.com/api/v1/users?filterby=firstname eq 'John'
@@ -58,37 +58,9 @@ In this example only projects are returned that have a member with the first nam
 
 No, deleted entries cannot be requested from the API. Instead of deleting data completely, we recommend using the archiving option whenever possible.
 
-#### Does awork provide webhooks so I can sync changes?
+#### Does awork provide webhooks so I can get notified of changes?
 
-Yes, you can create webhooks in awork. More information about this can be found in our [Help Center](https://support.awork.com/en/articles/5415462-webhooks).
-
-A webhook is triggered for your entire workspace. So for example on the `project-added` webhook, you receive events for all projects created in your workspace, no matter who created it or to which team it belongs.
-
-The supported event types include:
-
-* Client added
-* Client deleted
-* File added
-* File deleted
-* Project added
-* Project comment added
-* Project deleted
-* Project member added
-* Project member deleted
-* Project status changed
-* Project task added
-* Project task deleted
-* Task assignment added
-* Task assignment deleted
-* Task comment added
-* Task status changed
-* Time tracking added
-* Time tracking deleted
-* User activation changed
-* User added
-* User deleted
-
-Webhooks can be configured in your awork workspace under Settings > Integrations.
+Yes, you can create webhooks in awork. More information about this can be found in our [Developer Docs](https://developers.awork.com/webhooks).
 
 ### Code Examples
 
