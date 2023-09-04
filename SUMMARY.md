@@ -9,6 +9,7 @@
 * [Ordering](ordering.md)
 * [Rate Limits](rate-limits.md)
 * [Permissions](permissions.md)
+* [Webhooks](webhooks.md)
 * [API Changes](api-changes.md)
 * [API Endpoints](https://openapi.awork.com)
 * [Subscribe to Updates](https://form.123formbuilder.com/form-6455567/api-newsletter-signup)
