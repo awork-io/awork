@@ -11,6 +11,7 @@
 * [Permissions](permissions.md)
 * [Webhooks](webhooks.md)
 * [API Changes](api-changes.md)
+* [Support](support.md)
 * [API Endpoints](https://openapi.awork.com)
 * [Subscribe to Updates](https://form.123formbuilder.com/form-6455567/api-newsletter-signup)
 * [Imprint](https://www.awork.com/legal-and-privacy/imprint)
