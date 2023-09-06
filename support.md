@@ -1,5 +1,7 @@
 # Support
 
+## Getting help with the API
+
 These Developer Docs should contain all details you need to successfully build apps and integrations with the awork API. We're happy to answer your questions in our [GitHub forum](https://github.com/awork-io/awork/issues).
 
 Please create a separate issue for each question. If you have issues with a particular request, please include as much detail as possible. Most importantly, we need the `Trace-Id` to be able to help you quickly.
