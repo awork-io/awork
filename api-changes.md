@@ -29,6 +29,8 @@ This section shows you recent changes that are already live in our API.
 
 We have recently switched our primary domain from `awork.io` to `awork.com`. The application and website remain available at both domains for the time being, however, **by end of December 2023**, clients must have updated to `awork.com` to continue using the awork API.
 
+[Find more details here](https://support.awork.com/en/articles/8333169-awork-switches-to-com).
+
 ### Projects, Tasks and Users: Key and NumberCount properties removed 🚨
 
 The `Key` property of Projects, Tasks and Users as well as the `NumberCount` property of Tasks have been removed. These properties were never used in the awork web app, so we're removing them from the API models as well.

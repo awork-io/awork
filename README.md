@@ -6,6 +6,11 @@ This is the developer guide for the awork API, which allows developers to access
 
 At awork, we do our best to build a powerful and easy-to-use public API. What does that mean for you? It means that if you see something happening in the awork web app, you can probably do that same thing via the API.
 
+{% hint style="warning" %}
+Please update existing integrations to `awork.com`.\
+[More details](https://support.awork.com/en/articles/8333169-awork-switches-to-com)
+{% endhint %}
+
 Before you get started, you’ll need to follow the following steps:
 
 * Create an account in [awork.](https://www.awork.com)
