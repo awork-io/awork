@@ -32,30 +32,7 @@ To give some further information on the cause of the error, the API also returns
 * **Details:** Further explanations or hints on fixing the request.
 * **ValidationErrors:** If the model validation failed, all violations are listed here.
 
-| Description                            |                                                                                                        |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| <p>workspaceid-missing<br></p>         | The request is missing a valid team id. Most likely, your token is invalid.                            |
-| not-found                              | The requested resource could not be located.                                                           |
-| entity-archived                        | The request tried to perform an operation with an archived entity.                                     |
-| duplication-violation                  | A property that requires a unique value detected a duplication.                                        |
-| database-commit                        | The commit to the database failed. Your changes have not been committed!                               |
-| <p>concurrency-violation<br></p>       | Concurrent processes changed data and created conflicts in the process.                                |
-| date-dependency                        | Two or more date values are in violation with each other (e.g. start date after due date).             |
-| <p>date-out-of-range<br></p>           | A single date value is not in its validity range (e.g. birth date in the future).                      |
-| value-out-of-range                     | A value is not in its defined range of validity (e.g. negative prices).                                |
-| invalid-operation                      | The request would have caused an illegal data state.                                                   |
-| <p>invalid-model<br></p>               | The body of the request is invalid or empty.                                                           |
-| <p>validation-failed<br></p>           | The model validation of the request failed.                                                            |
-| server-error                           | <p>An internal error occurred.<br></p>                                                                 |
-| already-exist-error                    | The request adds an entity which already exists.                                                       |
-| <p>invalid-filter-or-order<br></p>     | <p>The request contains an invalid filter or sort statement.<br></p>                                   |
-| <p>illegal-property-transition<br></p> | The request would cause a value transition which is not allowed.                                       |
-| unauthorized                           | The owner of the request has insufficient permissions.                                                 |
-| invalid-batch-operation                | The request for a batch operations is invalid.                                                         |
-| deactivated-user                       | The request tried to perform an operation with a deactivated user.                                     |
-| request-body-too-large                 | The uploaded file exceeds the allowed size limit                                                       |
-| insufficient-subscription-level        | Your team does not have the required subscription level to use this feature. Upgrade to a higher plan. |
-| insufficient-seats                     | Your team does not have enough remaining seats while trying to invite or activate users.               |
+<table data-header-hidden><thead><tr><th width="332">Description</th><th></th></tr></thead><tbody><tr><td>Error code</td><td>Description</td></tr><tr><td><code>workspaceid-missing</code><br></td><td>The request is missing a valid team id. Most likely, your token is invalid.</td></tr><tr><td><code>not-found</code></td><td>The requested resource could not be located.</td></tr><tr><td><code>entity-archived</code></td><td>The request tried to perform an operation with an archived entity.</td></tr><tr><td><code>duplication-violation</code></td><td>A property that requires a unique value detected a duplication.</td></tr><tr><td><code>database-commit</code></td><td>The commit to the database failed. Your changes have not been committed!</td></tr><tr><td><code>concurrency-violation</code><br></td><td>Concurrent processes changed data and created conflicts in the process.</td></tr><tr><td><code>date-dependency</code></td><td>Two or more date values are in violation with each other (e.g. start date after due date).</td></tr><tr><td><code>date-out-of-range</code><br></td><td>A single date value is not in its validity range (e.g. birth date in the future).</td></tr><tr><td><code>value-out-of-range</code></td><td>A value is not in its defined range of validity (e.g. negative prices).</td></tr><tr><td><code>invalid-operation</code></td><td>The request would have caused an illegal data state.</td></tr><tr><td><code>invalid-model</code><br></td><td>The body of the request is invalid or empty.</td></tr><tr><td><code>validation-failed</code><br></td><td>The model validation of the request failed.</td></tr><tr><td><code>server-error</code></td><td>An internal error occurred.<br></td></tr><tr><td><code>already-exist-error</code></td><td>The request adds an entity which already exists.</td></tr><tr><td><code>invalid-filter-or-order</code></td><td>The request contains an invalid filter or sort statement.<br></td></tr><tr><td><code>illegal-property-transition</code></td><td>The request would cause a value transition which is not allowed.</td></tr><tr><td><code>unauthorized</code></td><td>The owner of the request has insufficient permissions.</td></tr><tr><td><code>invalid-batch-operation</code></td><td>The request for a batch operations is invalid.</td></tr><tr><td><code>deactivated-user</code></td><td>The request tried to perform an operation with a deactivated user.</td></tr><tr><td><code>request-body-too-large</code></td><td>The uploaded file exceeds the allowed size limit</td></tr><tr><td><code>insufficient-subscription-level</code></td><td>Your team does not have the required subscription level to use this feature. Upgrade to a higher plan.</td></tr><tr><td><code>insufficient-seats</code></td><td>Your team does not have enough remaining seats while trying to invite or activate users.</td></tr></tbody></table>
 
 ### HTTP Status Codes
 
@@ -67,15 +44,15 @@ On each request to our API, you will receive a response with a HTTP status code 
 GET           200 (OK) including the object(s)
 POST          200 (OK) including the newly created object
               202 (Accepted) for batch or background operations
-              204 (No content) for business operations without a return value
+              204 (No Content) for business operations without a return value
 PUT           200 (OK) including the updated object
-DELETE        204 (No content)
+DELETE        204 (No Content)
 ```
 
 #### Client Failure Status Codes
 
 ```
-400 (Bad request)   When the request model is invalid or the operation is not allowed
+400 (Bad Request)   When the request model is invalid or the operation is not allowed
 401 (Unauthorized)  When the requesting user is lacking the necessary permissions for the request
-404 (Not found)     When a requested resource does not exist
+404 (Not Found)     When a requested resource does not exist
 ```
