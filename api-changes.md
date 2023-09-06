@@ -25,9 +25,9 @@ These changes are happening in the API in the future, release date tbd.
 
 This section shows you recent changes that are already live in our API.
 
-#### Domain changed to awork.com: clients need to update URLs 🚨
+### Domain changed to awork.com: clients need to update URLs 🚨
 
-We have recently switched our primary domain from `awork.io` to `awork.com`. The application and website remain available at both domains for the time being, however, by end of December 2023, clients must have updated to `awork.com` to continue using the awork API.
+We have recently switched our primary domain from `awork.io` to `awork.com`. The application and website remain available at both domains for the time being, however, **by end of December 2023**, clients must have updated to `awork.com` to continue using the awork API.
 
 ### Projects, Tasks and Users: Key and NumberCount properties removed 🚨
 
