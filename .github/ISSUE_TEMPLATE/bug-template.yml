@@ -39,4 +39,4 @@ body:
     attributes:
       value: |
         ## Disclaimer
-        Please be aware that all conversations in this GitHub repo are public, therefore please do not include private/confidential information such as workspace url, security tokens or personal information like e-mail addresses, names etc.
+        Please be aware that all conversations in this GitHub repository are public, therefore please do not include private/confidential information such as workspace url, API tokens or personal information such as e-mail, names, etc.
