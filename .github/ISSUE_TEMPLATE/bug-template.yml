@@ -10,9 +10,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## What infos do we need in order to help?
-        Please provide us with a trace id of the failing call and a detailed problem description including expected behaviour.
-        The trace-id can be found in the response headers. It looks like this: `trace-id: 2ab931e5606e3ccd`.
+        ## What information do we need in order to help?
+        Please provide us with a Trace-Id of the failing request and a detailed problem description including expected behaviour.
+        The `Trace-Id` can be found in the response headers. It looks like this: `Trace-Id: 2ab931e5606e3ccd`.
   - type: textarea
     id: problem-description
     attributes:
@@ -24,9 +24,9 @@ body:
   - type: textarea
     id: trace-id
     attributes:
-      label: What is the trace id of the call?
-      description: Please provide the trace id of the call. If you don't have one, please provide the request route + request model here.
-      placeholder: The trace-id of the call.
+      label: What is the `Trace-Id` of the request?
+      description: Please provide the [`Trace-Id`](https://developers.awork.com/support) of the request so we can help you more quickly. If you don't have one, please provide the request route + request model here.
+      placeholder: The `Trace-Id` of the request.
     validations:
       required: true
   - type: textarea
