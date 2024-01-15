@@ -32,7 +32,7 @@ The client secret is only displayed when creating the client application! It can
 
 The OAuth 2.0 authentication flow uses scopes to define which rights are granted to the application by the user. Scopes are sent as a space separated list. The API currently supports these scopes:
 
-* `offline_access`: continued access, issues a refresh token.
+* `offline_access`: continued access, issues a `Refresh Token`.
 
 ### Tokens
 
@@ -42,11 +42,11 @@ The `Access Token` is used to authenticate yourself within the API resources. It
 
 **Refresh Token**
 
-The `Refresh Token` is used to get a new `Access Token` once that one has expired. A `Refresh Token` only expires when the user manually revokes access for the client application.
+The `Refresh Token` is used to get a new `Access Token` once the `Access Token` has expired. A `Refresh Token` expires when it is used to get a new `Access Token` or after 30 days. A new `Refresh Token` is issued every time a new `Access Token` is requested.
 
 **Authorization Code**
 
-The `Authorization Code` is a transitory code used to retrieve an `Access Token`. It should not be stored in the client application.
+The `Authorization Code` is a transitory code used to retrieve an `Access Token` and `Refresh Token`. It should not be stored in the client application.
 
 #### Endpoints <a href="#authentication-endpoints" id="authentication-endpoints"></a>
 
@@ -166,12 +166,13 @@ grant_type=refresh_token
 
 #### Refresh Token Response
 
-The authorization server responds with a new `Access Token` and a new expiration.
+The authorization server responds with a new `Access Token` and a new expiration. It also returns a new `Refresh Token`, invalidating the old one.
 
 ```
 {
     "access_token": "eyJhbGciOiJ...",
     "token_type": "Bearer",
     "expires_in": 86400,
+    "refresh_token": "eyJhbGciOiJ...",
 }
 ```

@@ -1,6 +1,6 @@
 # awork.com Developer Docs
 
-![](.gitbook/assets/new-bg.png)
+![](<.gitbook/assets/New BG.png>)
 
 This is the developer guide for the awork API, which allows developers to access awork's entities and business logic. We're glad you're here, and we hope that this documentation will help you build something awesome.
 

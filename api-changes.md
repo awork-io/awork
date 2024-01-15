@@ -143,16 +143,8 @@ POST /tasks/unassignUsers
 
 {% swagger baseUrl="https://api.awork.io/v1/" path="tasks/{taskId}/setAssignees" method="post" summary="tasks/{taskId}/setAssignees" %}
 {% swagger-description %}
-This method is used to assign users to a task. You always need to pass all users you want to assign. If an already assigned user is not in the passed user id list, he/she gets unassigned.
-
+This method is used to assign users to a task. You always need to pass all users you want to assign. If an already assigned user is not in the passed user id list, he/she gets unassigned.\
 \
-
-
-
-
-\
-
-
 The user ids are passed in the body as an array of strings.
 {% endswagger-description %}
 
@@ -168,25 +160,9 @@ The id of the task.
 
 {% swagger baseUrl="https://api.awork.io/v1/" path="taskTemplates/{tasktemplateId}/setAssignees" method="post" summary="taskTemplates/{taskTemplateId}/setAssignees" %}
 {% swagger-description %}
-This method is used to assign users to a task template that belongs to a task bundle. You always need to pass all users you want to assign. If an already assigned user is not in the passed user id list, he/she gets unassigned.
-
+This method is used to assign users to a task template that belongs to a task bundle. You always need to pass all users you want to assign. If an already assigned user is not in the passed user id list, he/she gets unassigned.\
+Users need write permissions for the feature `task-manage-config`.\
 \
-
-
-Users need write permissions for the feature 
-
-`task-manage-config`
-
-.
-
-\
-
-
-
-
-\
-
-
 The user ids are passed in the body as an array of strings.
 {% endswagger-description %}
 
@@ -210,11 +186,7 @@ Whether the setting is active or not.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="type" type="string" %}
-The setting type. For multi-user assignment: 
-
-`allow-multi-user-assignment`
-
- 
+The setting type. For multi-user assignment: `allow-multi-user-assignment`&#x20;
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -232,15 +204,7 @@ The setting type. For multi-user assignment:
 
 {% swagger baseUrl="https://api.awork.io/v1/" path="tasks/batch/{operation}" method="post" summary="tasks/batch/assignusers 🚨" %}
 {% swagger-description %}
-Batch endpoint to assign users to multiple tasks. Used to be 
-
-`assignuser`
-
-.  Set 
-
-`removeOldAssignments`
-
- to false if you want to keep existing task assignments.
+Batch endpoint to assign users to multiple tasks. Used to be `assignuser`.  Set `removeOldAssignments` to false if you want to keep existing task assignments.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="operation" type="string" %}
