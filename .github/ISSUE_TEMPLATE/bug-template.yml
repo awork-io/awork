@@ -24,9 +24,9 @@ body:
   - type: textarea
     id: trace-id
     attributes:
-      label: What is the `Trace-Id` of the request?
+      label: What is the Trace-Id of the request?
       description: Please provide the [`Trace-Id`](https://developers.awork.com/support) of the request so we can help you more quickly. If you don't have one, please provide the request route + request model here.
-      placeholder: The `Trace-Id` of the request.
+      placeholder: The Trace-Id of the request.
     validations:
       required: true
   - type: textarea
