@@ -4,7 +4,7 @@
 
 Detailed infos about the API can be found in our [Developer Docs](https://developers.awork.com/). If you have general questions about how awork works, check out our [Help Center](https://support.awork.com/en).
 
-If you have any questions or need help, feel free to open an issue in the [Issues Tab](https://github.com/awork-io/awork/issues).
+If you have any questions or need help, feel free to post in the [awork Community Developer Forum]([https://github.com/awork-io/awork/issues](https://community.awork.com/c/developer-forum/17)).
 
 We currently have code examples for C# and Typescript. You can find them in the examples folder above.
 
