@@ -18,4 +18,4 @@ Before you get started, you’ll need to follow the following steps:
 * Check out how the [API](https://openapi.awork.com) works or import it to Postman or other clients as a [Swagger](https://swagger-doc.awork.com/api/swagger-combine) doc.
 * [Subscribe](https://form.123formbuilder.com/form-6455567/api-newsletter-signup) to Updates and other Developer News.
 
-If you have any questions about the awork API, simply create an _issue_ on [Github](https://github.com/awork-io/awork/issues).
+If you have any questions about the awork API, simply post in the [awork Community Developer Forum](https://community.awork.com/c/developer-forum/17).
