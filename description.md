@@ -17,13 +17,12 @@ The complete URL can look like this: `https://api.awork.com/api/v1/users?page=1&
 
 Most API calls contain simple _CRUD_ endpoints to handle the data manipulation for that particular entity. In some cases the default POST, PUT, or DELETE routes are replaced by so-called _business operations_. This separation is because actions do not only manipulate the entity itself but also affect other entities or even trigger further actions, workflows, or events in other parts of awork. An example of this would be an automatic task creation triggered by the status change of a project.
 
-Business operations can be identified by an additional segment in the URL, which usually begins with a verb. For Example:
+Business operations can be identified by an additional segment in the URL, which usually begins with a verb. For example:
 
-* setArchived
-* removeProjectMember
-* renameTag
-* setStatus
-* etc.
+* `setArchived`
+* `removeProjectMember`
+* `renameTag`
+* `setStatus`
 
 ### Deleted vs. Archived
 

@@ -15,12 +15,6 @@ description: >-
 
 This section shows upcoming changes. Breaking changes are additionally marked with 🚨.
 
-### ResourceVersion property removed 🚨
-
-We are going to remove the `ResourceVersion` property from all API models.
-
-These changes are happening in the API in the future, release date tbd.
-
 ## Recent changes
 
 This section shows you recent changes that are already live in our API.
