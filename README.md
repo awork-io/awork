@@ -10,9 +10,9 @@ We currently have code examples for C# and Typescript. You can find them in the 
 
 ### FAQ
 
-#### Can I import the Swagger API definition into Postman or other clients?
+#### Can I import the OpenAPI definition into Postman or other clients?
 
-Yes, you can use this link to import it: [https://swagger-doc.awork.com/api/swagger-combine](https://swagger-doc.awork.com/api/swagger-combine)
+Yes, you can use this link to import it: [https://app.awork.com/openapi/v1e](https://app.awork.com/openapi/v1)
 
 #### What is the easiest option for authorization for the API?
 
