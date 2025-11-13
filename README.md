@@ -12,7 +12,7 @@ We currently have code examples for C# and Typescript. You can find them in the 
 
 #### Can I import the OpenAPI definition into Postman or other clients?
 
-Yes, you can use this link to import it: [https://app.awork.com/openapi/v1e](https://app.awork.com/openapi/v1)
+Yes, you can use this link to import it: [https://app.awork.com/openapi/v1](https://app.awork.com/openapi/v1)
 
 #### What is the easiest option for authorization for the API?
 
